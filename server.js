@@ -6,9 +6,9 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use(express.static("./static"));
+app.use(express.static("static"));
 
 app.listen(3000, function()
 {
-    console.log("Serving static on 81");
+    console.log("Serving static on 3000");
 });
