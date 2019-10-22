@@ -1,8 +1,18 @@
 {
+    "main": "server.js",
+    "engines": {
+      "node": ">=7"
+    },
     "name": "tensorflowjs",
     "version": "1.0.0",
     "dependencies": {
         "express": "latest",
         "npyjs": "^0.1.2"
-    }
+    },
+    "scripts": {
+        "start": "npm start",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "hu",
+      "license": "MIT"
 }
