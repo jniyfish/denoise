@@ -10,7 +10,7 @@
         "npyjs": "^0.1.2"
     },
     "scripts": {
-        "start": "npm start",
+        "start": "node server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
       },
       "author": "hu",
