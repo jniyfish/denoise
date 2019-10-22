@@ -6,14 +6,9 @@ app.use(function(req,res,next){
     next();
 });
 
-const port = process.env.PORT || 3000;
+app.use(express.static("./static"));
 
-app.listen(port, function () {
-  console.log(`Server listening on port ${port}!`);
-});
-
-
-app.listen(81, function()
+app.listen(3000, function()
 {
     console.log("Serving static on 81");
 });
