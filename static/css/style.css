@@ -1,0 +1,218 @@
+.xAxis {
+    display: none;
+}
+
+#invi {
+    display: none;
+}
+
+#denoise {
+    display: none;
+}
+
+
+
+#loading {
+    display: none;
+}
+#preDiv{
+    display: none;
+}
+#noiseDiv{
+    display: none;
+}
+#gauDiv{
+    display: none;
+}
+#hisDiv{
+    display: none;
+}
+#inputDiv{
+    display: none;
+}
+#deDiv{
+    display: none;
+}
+
+
+#flexbox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background:#DCDBDC;
+    box-sizing: border-box;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#flexbox .box {
+    border:0px;
+    background: #DCDBDC;
+    width: 32.5%;
+    flex-shrink: 0;
+    align-items: flex-start;
+
+}
+
+.myImage {
+    border: 0;
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-around;
+    left: 47%;
+
+}
+.myImage .subImage
+{
+    padding-top: 70px;
+    padding-left: 50px;
+}
+.myImage .subElement
+{
+    width:480px;
+}
+.myImage #originalImg
+{
+    z-index:0;
+    position: absolute;
+    top:70px;
+    left:50px;
+    max-height:500px;
+    width:auto;
+}
+.myImage #snpImg
+{
+    z-index:0;
+    position: absolute;
+    top:100px;
+    left:80px;
+    max-height:500px;
+    width:auto;
+    
+}
+.myImage #histo
+{
+    z-index:0;
+    display: none;
+    border: 2px;
+    border-style: solid;
+    position: absolute;
+    top:130px;
+    left:110px;
+}
+.myImage #snp_ori
+{
+    z-index:1;
+    position: absolute;
+    top:70px;
+    left:50px;
+    max-height:500px;
+    width:auto;
+
+}
+.myImage #realsnpImg
+{
+    z-index:2;
+    position: absolute;
+    top:100px;
+    left:80px;
+    max-height:500px;
+    width:auto;
+    
+}
+.myImage #snpHisto
+{
+    z-index:3;
+    display: none;
+    border: 2px;
+    border-style: solid;
+    position: absolute;
+    top:130px;
+    left:110px;
+}
+
+.myImage #deCav3
+{
+    z-index:4;
+    display: none;
+    position: absolute;
+    top:160px;
+    left:140px;
+}
+
+
+#popBox{
+    position: absolute;
+    display:none;
+    width:90%;
+    height:500px;
+    left:5%;
+    top:50px;
+    z-index:11;
+    background: pink; 
+}
+
+#popLayer{
+    position: absolute;
+    display:none;
+    left:0%;
+    top:50px;
+    z-index:10;
+    width:90%;
+    max-height: 600px;
+    background:#DCDBDC;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+.flip{
+    margin:0px;
+    padding:5px;
+    text-align:center;
+    background:#E09697;
+    cursor:pointer;
+    font-family:'Arial';
+    position: absolute;
+    bottom:0px;
+    width:100%;
+    z-index:45;
+}
+.panel1{
+    text-align:center;
+    background: #1abc9c;
+
+    display:none;font-family:'Arial';
+    position: absolute;
+    bottom:50px;
+    width:100%;
+    height:600px;
+    z-index:40;
+}
+.panel2{
+    text-align:center;
+    background: #1abc9c;
+
+    display:none;font-family:'Arial';
+    position: absolute;
+    bottom:50px;
+    width:100%;
+    height:600px;
+    z-index:40;
+}
+.panel3{
+    text-align:center;
+    background: #1abc9c;
+
+    display:none;font-family:'Arial';
+    position: absolute;
+    bottom:50px;
+    width:100%;
+    height:600px;
+    z-index:40;
+}
+
+mylable{
+    
+}

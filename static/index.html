@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<!--
+	Binary by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+	<title>Denoise by Tensorflowjs</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/spe.css" />
+	<link rel="stylesheet" href="css/gau.css" />
+	<link rel="stylesheet" href="css/pre.css" />
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo"><strong>Denoise</strong> by Tensorflowjs</a>
+		<nav>
+			<a href="#menu">Menu</a>
+		</nav>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="generic.html">Generic</a></li>
+			<li><a href="elements.html">Elements</a></li>
+		</ul>
+	</nav>
+
+	<!-- Banner -->
+	<section id="banner">
+		<div class="inner">
+			<h1>An Automated Technique for Image Noise<br />
+				Identification Based on Deep Convolution Neural Networks</h1>
+			<ul class="actions">
+				<label style="
+				border: 2px;
+				border-style: solid;
+				border-color: aliceblue;
+				width:100px; 
+				position: absolute;
+				left:44%;">Upload Img Here !
+					<input id="image-selector" class="form-control border-0" type="file" style="display: none;"></input>
+				</label>
+			</ul>
+		</div>
+	</section>
+
+	<!-- One -->
+	<article id="one" class="post style1">
+
+		<div class="content">
+			<div class="inner">
+				<header>
+					<h2><a href="generic.html">Salt And Pepper Noise</a></h2>
+					<p class="info"><a href="#">Medium Filter</a></p>
+				</header>
+				<p>Salt and pepper noise, also known as impulse noise, is a kind of noise that is often seen in many
+					researches.
+					This type of noise can be caused by sudden and severe interference from the image signal,
+					such as the failure of pixel elements in camera sensors, faulty memory space in storage or
+					analog-to-digital
+					converter error and many more. The noisy image of salt and pepper will have maximum (255) or minimum
+					(0) pixel values
+					which appear a random white or black point on an image.</p>
+				<ul class="actions">
+
+					<button id="snp-button" class="btn btn-dark float-right" onclick="snpFunction()">SNP</button>
+					<button id="histogram-button" class="btn btn-dark float-right"
+						onclick="Histogram(1)">Histogram</button>
+
+					<button id="de-button" class="btn btn-dark float-right" onclick="predict(1)">Predict</button>
+				</ul>
+			</div>
+
+		</div>
+		<div class="myImage">
+			<div class="subImage">
+				<img src="" id="originalImg" class="subElement" />
+				<img src="" id="snp_ori" class="subElement" />
+				<canvas id="snpImg" class="subElement"></canvas>
+				<canvas id="realsnpImg" class="subElement"></canvas>
+				<canvas id="histo" class="subElement"></canvas>
+				<canvas id="snpHisto" class="subElement"></canvas>
+				<canvas id="deCav3"></canvas>
+			</div>
+		</div>
+		<div class="box" style=" display:none;">
+			<div>
+				<canvas id="snp_3" style="width:100%"></canvas>
+			</div>
+		</div>
+		<div>
+			<div class="flip" onclick="toggle(1)"><span class="1">Show Detail </span></div>
+			<div class="panel1">
+				<div id="flexbox">
+					<div class="box">
+						<div>
+							<img src="" id="snp_1" style="width:100%;" />
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="snp_2" style="width:100%"></canvas>
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="snp_4" style="width:100%"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- two -->
+	<article id="four" class="post invert style2 alt">
+		<div class="image">
+
+		</div>
+		<div class="content">
+			<div class="inner">
+				<header>
+					<h2><a href="generic.html">Speckle Noise</a></h2>
+					<p class="info">Bilateral Filter </p>
+				</header>
+				<p>Speckle noise is a type of noise commonly found in medical tomography images and synthetic aperture
+					radar (SAR),
+					and it generally tends to reduce the image contrast. Early scientists often
+					used multiple observations to removal speckle and improve the interpretation of radar images.
+					Speckle noise is a kind of multiplicative noise and appearance has a granular pattern. </p>
+				<ul class="actions">
+					<button id="spe-button" class="btn btn-dark float-right" onclick="speFunction()">Speckle</button>
+					<button id="histogram-button" class="btn btn-dark float-right"
+						onclick="Histogram(2)">Histogram</button>
+					<button class="btn btn-dark float-right" onclick="predict(2)">Predict</button>
+				</ul>
+			</div>
+
+		</div>
+		<div class="myImage2">
+			<div class="subImage">
+				<img src="" id="spe_ori" class="subElement" />
+				<canvas id="speImg" class="subElement"></canvas>
+				<canvas id="speHisto" class="subElement"></canvas>
+				<canvas id="deCav2"></canvas>
+			</div>
+		</div>
+		<div>
+			<div class="flip" onclick="toggle(2)"><span class="1">Show Detail </span></div>
+			<div class="panel2">
+				<div id="flexbox">
+					<div class="box">
+						<div>
+							<img src="" id="spe_1" style="width:100%;" />
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="spe_2" style="width:100%"></canvas>
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="spe_3" style="width:100%"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- Three -->
+	<article id="three" class="post style2">
+		<div class="content">
+			<div class="inner">
+				<header>
+					<h2><a href="generic.html">Gaussian Noise</a></h2>
+					<p class="info">Bilateral Filter</p>
+				</header>
+				<p>Gaussian noise is a type of noise whose probability density function is equal to the noise of a
+					Gaussian distribution,
+					also known as normal distribution which is a very important probability distribution in the fields
+					of mathematics,
+					physics and engineering.</p>
+				<ul class="actions">
+					<button class="btn btn-dark float-right" onclick="gauFunction()">Gaussiau</button>
+					<button class="btn btn-dark float-right" onclick="Histogram(3)">Histogram</button>
+					<button class="btn btn-dark float-right" onclick="predict(3)">Predict</button>
+				</ul>
+			</div>
+		</div>
+		<div class="myImage3">
+			<div class="subImage">
+				<img src="" id="gau_ori" class="subElement" />
+				<canvas id="gauImg" class="subElement"></canvas>
+				<canvas id="gauHisto" class="subElement"></canvas>
+				<canvas id="deCav1"></canvas>
+			</div>
+		</div>
+		<div>
+			<div class="flip" onclick="toggle(3)"><span class="1">Show Detail </span></div>
+			<div class="panel3">
+				<div id="flexbox">
+					<div class="box">
+						<div>
+							<img src="" id="gau_1" style="width:100%;" />
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="gau_2" style="width:100%"></canvas>
+						</div>
+					</div>
+					<div class="box">
+						<div>
+							<canvas id="gau_3" style="width:100%"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- Six -->
+	<article id="four" class="post invert style2 alt">
+		<div class="image">
+
+		</div>
+
+		<div class="content">
+			<div class="inner">
+				<header>
+					<h2><a href="generic.html">Denoise Noise Image</a></h2>
+					<p class="info">demo</p>
+				</header>
+				<p>
+					Upload a Noise Image and classsify the category of the noise,then choose a propert filter to denoise
+				</p>
+				<ul class="actions">
+					<label style="
+						border: 2px;
+						border-style: solid;
+						border-color: aliceblue;
+						width:100px; 
+						position: relative;
+						color:white;
+						left:44%;">Upload Img Here !
+						<input id="pre-selector" class="form-control border-0" type="file"
+							style="display: none;"></input>
+					</label>
+
+					<button id="histogram-button" class="btn btn-dark float-right"
+						onclick="Histogram(4)">Denoise</button>
+				</ul>
+				<div id="prediction">Predictions</div>
+			</div>
+		</div>
+
+		<div class="myImage4">
+			<div class="subImage">
+				<img src="" id="pre_ori" class="subElement" />
+				<canvas id="preImg" class="subElement"></canvas>
+				<canvas id="preHisto" class="subElement"></canvas>
+				<canvas id="preCav"></canvas>
+			</div>
+		</div>
+	</article>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+		</ul>
+		<div class="copyright">
+			&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a
+				href="https://unsplash.com">Unsplash</a>.
+		</div>
+	</footer>
+
+	<!------------------------------------------------->
+	<div id="invi">
+
+
+
+		<div class="row" id="a">
+			<div class="col-12">
+				<canvas id="picture"></canvas>
+			</div>
+		</div>
+		<div class="row" id="b">
+			<div class="col-12">
+				<h2 class="ml-3">Image</h2>
+				<img id="addnoise"></img>
+			</div>
+		</div>
+		<div class="row" id="c">
+			<div class="col-12">
+				<h2 class="ml-3">OPENCV</h2>
+				<canvas id="canvasOutput"></canvas>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12" id="deDiv">
+				<h2 class="ml-3">Denoise Img</h2>
+				<canvas id="denoisepic"></canvas>
+			</div>
+		</div>
+	</div>
+	<!------------------------------------------------->
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3"></script>
+	<script src="imagenet_classes.js"></script>
+	<script src="predict.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/umd/util.js"></script>
+	<script src="./js/opencv.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="./addwebjs.js"></script>
+	<script src="./gau.js"></script>
+	<script src="./spe.js"></script>
+	<script src="./addnoise.js"></script>
+	<script src="./pre.js"></script>
+
+</body>
+
+</html>

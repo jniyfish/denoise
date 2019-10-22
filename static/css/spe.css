@@ -1,0 +1,64 @@
+.myImage2 {
+    border: 0;
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-around;
+    left: 0%;
+
+}
+.myImage2 .subImage
+{
+    padding-top: 70px;
+    padding-left: 50px;
+}
+.myImage2 .subElement
+{
+    width:480px;
+}
+.myImage2 #originalImg
+{
+    z-index:0;
+    position: absolute;
+    top:70px;
+    left:50px;
+    max-height:500px;
+    width:auto;
+}
+.myImage2 #spe_ori
+{
+    z-index:1;
+    position: absolute;
+    top:70px;
+    left:50px;
+    max-height:500px;
+    width:auto;
+
+}
+.myImage2 #speImg
+{
+    z-index:2;
+    position: absolute;
+    top:100px;
+    left:80px;
+    max-height:500px;
+    width:auto;   
+}
+.myImage2 #speHisto
+{
+    z-index:3;
+    display: none;
+    border: 2px;
+    border-style: solid;
+    position: absolute;
+    top:130px;
+    left:110px;
+}
+.myImage2 #deCav2
+{
+    z-index:4;
+    display: none;
+    position: absolute;
+    top:160px;
+    left:140px;
+}

@@ -1,0 +1,55 @@
+.myImage3 {
+    border: 0;
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-around;
+    left: 47%;
+
+}
+.myImage3 .subImage
+{
+    padding-top: 70px;
+    padding-left: 50px;
+}
+.myImage3 .subElement
+{
+    width:480px;
+}
+.myImage3 #gau_ori
+{
+    z-index:1;
+    position: absolute;
+    top:70px;
+    left:50px;
+    max-height:500px;
+    width:auto;
+
+}
+.myImage3 #gauImg
+{
+    z-index:2;
+    position: absolute;
+    top:100px;
+    left:80px;
+    max-height:500px;
+    width:auto;   
+}
+.myImage3 #gauHisto
+{
+    z-index:3;
+    display: none;
+    border: 2px;
+    border-style: solid;
+    position: absolute;
+    top:130px;
+    left:110px;
+}
+.myImage3 #deCav1
+{
+    z-index:4;
+    display: none;
+    position: absolute;
+    top:160px;
+    left:140px;
+}
