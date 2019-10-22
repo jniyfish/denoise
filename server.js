@@ -6,7 +6,7 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use(express.static("./static2"));
+app.use(express.static("./static"));
 
 app.listen(81, function()
 {
