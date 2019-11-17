@@ -8,6 +8,7 @@ let mode;
 
 async function Histogram(Time)
 {
+    await   $('#why').show();
     if(Time==4){
         await preFunction();
     }
