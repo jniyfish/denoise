@@ -77,3 +77,24 @@ function toggle(mode)
         $(".xs2").toggle();   
     }
 }
+
+$('#load1').click(function()
+{
+    $('#why').show();
+}
+);
+$('#load2').click(function()
+{
+    $('#why').show();
+}
+);
+$('#load3').click(function()
+{
+    $('#why').show();
+}
+);
+$('#load4').click(function()
+{
+    $('#why').show();
+}
+);

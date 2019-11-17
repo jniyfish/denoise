@@ -58,6 +58,10 @@
 	<!-- One -->
 	<article id="one" class="post style1">
 
+		<div class="load-4" id="why">
+			<div class="ring-1"></div>
+		</div>
+
 		<div class="content">
 			<div class="inner">
 				<header>
@@ -75,7 +79,7 @@
 				<ul class="actions">
 
 					<button id="snp-button" class="btn btn-dark float-right" onclick="snpFunction()">SNP</button>
-					<button id="histogram-button" class="btn btn-dark float-right"
+					<button id="load1" class="btn btn-dark float-right"
 						onclick="Histogram(1)">Histogram</button>
 
 					<button id="de-button" class="btn btn-dark float-right" onclick="predict(1)">Predict</button>
@@ -141,7 +145,7 @@
 					Speckle noise is a kind of multiplicative noise and appearance has a granular pattern. </p>
 				<ul class="actions">
 					<button id="spe-button" class="btn btn-dark float-right" onclick="speFunction()">Speckle</button>
-					<button id="histogram-button" class="btn btn-dark float-right"
+					<button id="load2" class="btn btn-dark float-right"
 						onclick="Histogram(2)">Histogram</button>
 					<button class="btn btn-dark float-right" onclick="predict(2)">Predict</button>
 				</ul>
@@ -195,7 +199,7 @@
 					physics and engineering.</p>
 				<ul class="actions">
 					<button class="btn btn-dark float-right" onclick="gauFunction()">Gaussiau</button>
-					<button class="btn btn-dark float-right" onclick="Histogram(3)">Histogram</button>
+					<button id="load3"class="btn btn-dark float-right" onclick="Histogram(3)">Histogram</button>
 					<button class="btn btn-dark float-right" onclick="predict(3)">Predict</button>
 				</ul>
 			</div>
@@ -253,14 +257,14 @@
 						border-style: solid;
 						border-color: aliceblue;
 						width:100px; 
-						position: relative;
+						position: absolute;
 						color:white;
 						left:44%;">Upload Img Here !
 						<input id="pre-selector" class="form-control border-0" type="file"
 							style="display: none;"></input>
 					</label>
 
-					<button id="histogram-button" class="btn btn-dark float-right"
+					<button id="load4" class="btn btn-dark float-right"
 						onclick="Histogram(4)">Denoise</button>
 				</ul>
 				<div id="prediction">Predictions</div>
@@ -334,7 +338,7 @@
 	<script src="predict.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/umd/util.js"></script>
 	<script src="./js/opencv.js"></script>
-	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./addwebjs.js"></script>
 	<script src="./gau.js"></script>

@@ -2,7 +2,7 @@ let mode;
 
 (async function () {
     console.log("loading");
-    model = await tf.loadModel('https://denoisewithtensorflowjs.herokuapp.com/tfjs-models/model/model.json');
+    model = await tf.loadModel('http://localhost:81/tfjs-models/model/model.json');
 })();
 
 
@@ -171,6 +171,7 @@ async function Histogram(Time)
     await sleep(2000);
     removeSvg();
     //$("#histo").show();
+    $('#why').hide();
     let fuckyou = await cv.imread('histo');
     if(Time==1)
     {
