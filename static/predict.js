@@ -2,7 +2,7 @@ let mode;
 
 (async function () {
     console.log("loading");
-    model = await tf.loadModel('http://localhost:81/tfjs-models/model/model.json');
+    model = await tf.loadModel('https://denoisewithtensorflowjs.herokuapp.com/tfjs-models/model/model.json');
 })();
 
 
