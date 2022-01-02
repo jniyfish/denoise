@@ -7,7 +7,6 @@ https://docs.google.com/document/d/1-iO-0EdDZN9ZGx75HZLj4YUe5lQw0IvuyecpOpocytc/
 ### usage
 ```
 
-git checkout 36f392e
 sudo apt install npm
 npm install express
 npm start
