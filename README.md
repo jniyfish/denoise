@@ -8,6 +8,7 @@ https://docs.google.com/document/d/1-iO-0EdDZN9ZGx75HZLj4YUe5lQw0IvuyecpOpocytc/
 ```
 
 sudo apt install npm
+git checkout video_server
 npm install express
 npm start
 ```
